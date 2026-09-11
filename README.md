@@ -160,6 +160,7 @@ The confusion matrix obtained from the validation data is:
 ```
 
 ---
+![Confusion Matrix](results/confusion_matrix.png)
 
 ## 11. Error Analysis
 
@@ -170,6 +171,10 @@ The confusion matrix obtained from the validation data is:
 | 1 | def_front | ok_front | Faint scratch/wear marks on outer rim | Low-contrast defect blends into the metallic surface texture |
 | 2 | def_front | ok_front | No clearly visible surface defect | Likely a subtle internal/dimensional flaw, hard to detect visually |
 | 3 | def_front | ok_front | Very faint marking near inner rim edge | Fine detail lost after resizing to 224×224 |
+
+| Error 1 | Error 2 | Error 3 |
+|---|---|---|
+| ![Error 1](results/error_1.png) | ![Error 2](results/error_2.png) | ![Error 3](results/error_3.png) |
 
 **Conclusion:** The model relies primarily on overall shape and symmetry. Small, low-contrast casting defects (hairline scratches, minor blowholes) remain harder to detect given the limited number of defective training samples (40), even after fine-tuning `layer4`.
 
